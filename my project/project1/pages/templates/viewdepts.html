@@ -1,0 +1,171 @@
+{% include 'navbar.html' %}
+{% block nav %}
+
+<html>
+<head>
+
+     <title>
+
+        View pawnshops
+
+    </title>
+
+
+{% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+<style>
+
+body{
+backgroundco
+
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+
+        .navbar{
+            background-color: black;
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+
+input[type=text],input[type=password],input[type=number],input[type=email],
+select,input[type=date]
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label
+{
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: bold;
+}
+
+ table, tr, td {
+         border: 1px solid black;
+         border-collapse: collapse;
+      }
+      tr, td {
+         padding-top: 10px;
+         padding-bottom: 20px;
+         padding-left: 30px;
+         padding-right: 40px;
+      }
+
+
+
+
+    </style>
+
+
+
+</head>
+
+<body >
+
+
+
+
+<h2 align="center" style="margin-top: 20px;"><u>View All Pawnshops</u></h2>
+<div style="background-color:powderblue;">
+<h3 style="margin-top: 40px;">search pawnshops available according to category of collateral they provide services for </h3>
+
+<form method="post" action="{% url 'displayitems' %}">
+    {% csrf_token %}
+
+<table align=center>
+
+
+
+<tr>
+<td><label>Enter item type</label></td>
+<td>
+    <input type="select" name="pname" required>
+</td>
+</tr>
+
+
+
+<tr><td></td></tr>
+
+<tr align=center>
+<td colspan=2><input type="submit" value="Search" class="button"></td>
+</tr>
+
+</table>
+</div>
+</form>
+<h3 align="center" style="margin-top: 50px;"> All the pawnbroker agents provided by us</h3>
+Total pawnshops = {{count}}  <br><br>
+
+<div align="center" style="margin-top: 40px;" >
+<table align="center" border="10">
+    <tr style="font-weight:bold">
+        <td>ID</td>
+        <td>Name</td>
+        <td>Location</td>
+        <td>Contact</td>
+        <td>Email</td>
+
+    </tr>
+
+    {% for dept in pawnlist %}
+    <tr>
+        <td>{{dept.id}}</td>
+        <td>{{dept.name}}</td>
+        <td>{{dept.location}}</td>
+        <td>{{dept.contact}}</td>
+        <td>{{dept.email}}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+</div>
+
+
+
+
+</body>
+</html>
+
+{% endblock %}

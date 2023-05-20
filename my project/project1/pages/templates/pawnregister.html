@@ -1,0 +1,49 @@
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     {% load static %}
+    <link rel="stylesheet" href="{% static '/css/register.css' %}">
+
+
+    <title>Register</title>
+    <script src="/static/js/register.js"></script>
+
+</head>
+
+
+<body>
+<h3 align="center"><mark>{{msg}}</mark></h3>
+{% if message  %}
+    <div class="alert alert-secondary" role="alert">
+        <p>{{ message }}</p>
+    </div>
+{% endif %}
+   <form     method="POST" >
+      <!-- class named "container" is assigned to div -->
+        {% csrf_token%}
+      <div class="container">
+        <h1>Register</h1>
+        <p>Kindly fill in this form to register.</p>
+
+           {% for field in empform %}
+
+
+<label>{{field.label}}</label>
+{{field}}
+
+
+    {% endfor %}
+
+        <button type="submit">Register</button>
+      </div>
+
+
+    </form>
+
+
+</body>
+
+</html>

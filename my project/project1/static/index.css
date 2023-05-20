@@ -1,0 +1,159 @@
+body,html{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+section{
+  background:yellow;
+}
+.banner{
+  width:100%;
+  background:url('http://www.alstercloud.de/wp-content/uploads/2017/01/header.jpg') no-repeat;
+  background-size:cover;
+  background-position:center;
+  min-height:600px;
+
+}
+.banner h3{
+  text-align:center;
+  margin-top: 200px;
+  color:#fff;
+  font-size:80px;
+  font-weight:700;
+  font-family: 'Josefin Sans', sans-serif;
+ }
+.banner p{
+  text-align:center;
+  color:#fff;
+  font-size:1.3em;
+  opacity:1;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+.opaque-navbar .container .navbar-header >a{
+  color:#fff;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+.opaque-navbar .container .navbar-collapse >ul >li >a{
+  color:#fff;
+  text-transform:uppercase;
+  font-weight:700;
+}
+
+.opaque-navbar{
+  background-color:rgba(0,0,0,0);
+  border-bottom:1px solid #eee;
+
+  transition : background-color 0.5s ease 0s;
+}
+.opaque-navbar.opaque {
+    background-color:black ;
+    border:0px;
+    transition: background-color .5s ease 0s;
+}
+
+ul.dropdown-menu {
+    background-color: black;
+}
+.abt{
+  text-align:center;
+}
+.abt .jumbotron  {
+  background-color:#e67e22;
+}
+.abt h3{
+
+  color:white;
+  font-size:40px;
+
+}
+ hr{
+  width:100px;
+  border-width:3px;
+
+}
+.abt p{
+
+  color: rgba(255, 255, 255, 0.7);
+  font-size:20px;
+}
+.btn{
+  border:none;
+  border-radius:300px;
+  font-weight:bold;
+  text-transform:uppercase;
+
+}
+.btn-default{
+  padding-bottom: 15px;
+  padding-top:15px;
+  padding-left:30px;
+  padding-right:30px;
+}
+
+.no-padding{
+  padding:0;
+  margin-top:-30px;
+}
+
+ .col-6{
+  padding: 0 0;
+}
+
+.no-padding h1{
+  padding-top:55px;
+  text-transform:uppercase;
+}
+.no-padding hr{
+  border: 2px solid #d0d0d0;
+}
+.bg-dark{
+  background-color:#222222;
+  color:white;
+}
+
+.primary{
+  border:1px solid #d35400;
+}
+
+.my-font{
+  font-size:20px;
+
+}
+.bg-dark{
+  padding-top:55px;
+  padding-bottom:30px;
+}
+.padded{
+  padding-top:200px;
+}
+.padded .col-lg-4 a{
+ color:#d35400;
+  font-weight:bold;
+}
+
+.list-icon{
+  list-style-type:none;
+  text-decoration:none;
+  }
+.list-icon li{
+  display:inline;
+  padding-right:20px;
+}
+.list-icon .fa{
+  font-size:40px;
+}
+@media (max-width: 992px) {
+  body
+  {
+    background:white;
+  }
+  .opaque-navbar {
+    background-color: black;
+    height: 60px;
+    transition: background-color .5s ease 0s;
+}
+
+}
+
+

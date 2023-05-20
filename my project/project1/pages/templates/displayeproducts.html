@@ -1,0 +1,109 @@
+
+{% load static %}
+<html>
+<head>
+
+    <title>
+
+       Display Products
+
+    </title>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+<style>
+
+ {
+
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+
+        .navbar{
+            background-color: black;
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+
+
+
+<h2 align="center"><u>View All Products</u></h2>
+
+<br>
+
+<table align="center" border="2">
+    <tr style="font-weight:bold">
+        <td>ID</td>
+        <td>Cateogry</td>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Price</td>
+        <td>Image</td>
+    </tr>
+
+    {% for product in productlist %}
+    <tr>
+        <td>{{product.id}}</td>
+        <td>{{product.category}}</td>
+         <td>{{product.name}}</td>
+         <td>{{product.description}}</td>
+         <td>{{product.price}}</td>
+         <td>
+             <img src="{{product.image.url}}" width="25%" height="25%">
+         </td>
+
+
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+
+
+</body>
+</html>

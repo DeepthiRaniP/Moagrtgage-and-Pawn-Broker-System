@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+   {% load static %}
+<link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body >
+
+<div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNav">
+<span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+      <a class="navbar-brand page-scroll" href="#">PawnMaster</a>
+   </div>
+    <div class="collapse navbar-collapse" id="myNav">
+      <ul class=" nav navbar-nav pull-right">
+        <li><a href="{% url 'empregistration' %}" class="page-scroll">user registration</a></li>
+        <li><a href="{% url 'emplogin' %}" class="page-scroll">user login</a></li>
+        <li><a href="{% url 'pawnlogin' %}" class="page-scroll">pawnLogin</a></li>
+          <li><a href="{% url 'pawnregistration' %}" class="page-scroll">pawnbroker registration</a></li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+<section class="banner">
+  <div class="container">
+    <h3>Pawnbroker and Mortgage</h3>
+    <p>a single spot for loans <br/> </p>
+  </div>
+</section>
+
+<div class="abt" id="about">
+<div class="jumbotron">
+  <div class="container">
+    <h3>We Have What You Need</h3>
+    <hr></hr>
+    <p>PawnMaster is a complete automation solution for pawn Brokers.</br> It has been specially designed to cater to the technological needs of the pawn shop, pawn broker, pawn broking, gold loan finance, jewel finance services industry. All integrated with accounts, that helps the pawn broker to maintain their accounts management with ease.</p>
+
+
+
+    </div>
+  <a href="#portfolio" class="btn btn-default">Get Started!</a>
+  </div>
+</div>
+</div>
+<!--End ofAbout-->
+
+<!--PortFolio-->
+
+<div class="no-padding text-center" id="portfolio">
+ <div class="container">
+   <h1>Portfolio</h1>
+    <hr></hr>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class=" col-6 col-lg-4 col-sm-6">
+        <img src="static/images/download (1).jfif" class="img-thumbnail" alt="Project-1" width="100%" height="auto">
+      </div>
+      <div class="col-6 col-lg-4 col-sm-6">
+         <img src="/static/images/download.jfif" class="img-thumbnail" alt="Project-1" width="100%" height="auto">
+      </div>
+      <div class="col-6 col-lg-4 col-sm-6">
+         <img src="static/images/download (2).jfif" class="img-thumbnail" alt="Project-1" width="100%" height="auto">
+      </div>
+    </div>
+
+    <div class="row no-gutter">
+      <div class=" col-6 col-lg-4 col-sm-6">
+        <img src="http://s9.favim.com/orig/130725/photography-pocket-watches-v-vintage-Favim.com-801353.jpg" alt="Project-1" width="100%" height="auto">
+      </div>
+      <div class="col-6 col-lg-4 col-sm-6">
+         <img src="http://s9.favim.com/orig/130725/photography-pocket-watches-v-vintage-Favim.com-801353.jpg" class="img-thumbnail" alt="Project-1" width="100%" height="auto">
+      </div>
+      <div class="col-6 col-lg-4 col-sm-6">
+         <img src="http://s9.favim.com/orig/130725/photography-pocket-watches-v-vintage-Favim.com-801353.jpg" alt="Project-1" width="100%" height="auto">
+      </div>
+    </div>
+  </div>
+</div>
+<!--End of Portfolio-->
+
+<div class="contact" id="contact">
+  <div class="bg-dark">
+<div class="container" >
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 text-center">
+      <h1>Let's Get In Touch!</h1>
+      <hr class="primary"></hr>
+    <p class="my-font">If you have any queries or issues feel free to contact us.  Give us a call or send us an email and we will get back to you as soon as possible!</p>
+    </div>
+   <div class="padded">
+    <div class="col-lg-4 col-lg-offset-2 text-center">
+    <i class="fa fa-phone fa-3x sr-contact"></i>
+    <p>9856158322</p>
+    </div>
+
+    <div class="col-lg-4 text-center">
+       <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+       <p><a href="mailto:your-email@your-domain.com">abcd@gmail.com</a></p>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+<!--End Of Contact-->
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+    <div class="col-sm-6 text-center">
+      <h3>About this Page</h3>
+      <p>Used:Bootstrap,HTML,CSS,django.<br/>
+ </p>
+
+    </div>
+      <div class="col-sm-6 text-center">
+        <h3>Around The Web</h3>
+        <ul class="list-icon">
+          <li><a type="button" href="https://www.facebook.com/manas.yadav.71"><i class="fa fa-facebook-official"></i></a>
+            <li><a type="button" href="https://github.com/manas2297"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+              <li><a type="button" href=""><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

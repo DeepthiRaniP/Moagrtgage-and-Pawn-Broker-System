@@ -1,0 +1,44 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     {% load static %}
+    <link href="{% static '/css/dashboard1.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="multi_color_border"></div>
+    <div class="top_nav">
+        <div class="left">
+          <div class="logo"><p><span>Pawn</span>Master</p></div>
+
+      </div>
+      <div class="right">
+        <ul>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="{% url 'emplogout' %}">Logout</a></li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="bottom_nav">
+      <ul>
+
+        <li><a href="{% url 'emphome' %}">Home</a></li>
+
+        <li><a href="{% url 'empchangepwd' %}">Change Password</a></li>
+        <li><a href="{% url 'addproduct' %}">select Products</a></li>
+          <li><a href="{% url 'viewpawn' %}">Pawnshops available</a></li>
+
+        <li><a href="{% url 'feedback' %}">feedback</a></li>
+        <li><a href="{% url 'empprofile' %}"> Profile</a></li>
+
+
+      </ul>
+  </div>
+</div>
+</body>
+{% block nav %}
+{% endblock %}
